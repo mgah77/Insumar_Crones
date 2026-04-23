@@ -7,6 +7,7 @@
     'depends': ['account'],
     'data': [
         'data/cron_reparos.xml',
+        'views/account.xml',
     ],
     'installable': True,
     'application': True,

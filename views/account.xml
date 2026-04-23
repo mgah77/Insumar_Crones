@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+ <record id="action_customer_invoices_reparo" model="ir.actions.act_window">
+        <field name="name">Facturas de Cliente con Reparo</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">tree</field>
+        <field name="domain">
+            [
+                ('move_type', '=', 'out_invoice'),
+                ('sii_result', '=', 'Reparo'),
+                ('state', '=', 'posted')
+            ]
+        </field>
+        <field name="context">{
+            'default_move_type': 'out_invoice',
+            'search_default_posted': 1
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No hay facturas de cliente con estado de SII "Reparo".
+            </p>
+        </field>
+    </record>
+
+       <menuitem
+        id="menu_customer_invoices_reparo"
+        name="Facturas con Reparo (Clientes)"
+        parent="account.menu_finance"
+        action="action_customer_invoices_reparo"
+        sequence="15"
+        groups="account.group_account_manager"/>
+
+</odoo>
