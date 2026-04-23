@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
- <record id="action_customer_invoices_reparo" model="ir.actions.act_window">
+
+    <record id="action_customer_invoices_reparo" model="ir.actions.act_window">
         <field name="name">Facturas de Cliente con Reparo</field>
         <field name="res_model">account.move</field>
-        <field name="view_mode">tree, form</field>
+        <field name="view_mode">tree,form</field>
+
+        <!-- 🔑 CLAVE: Referenciar vistas explícitamente -->
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('account.view_move_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('account.view_move_form')})
+        ]"/>
+
         <field name="domain">
             [
                 ('move_type', '=', 'out_invoice'),
@@ -11,20 +19,21 @@
                 ('state', '=', 'posted')
             ]
         </field>
-        <field name="context">
-        {
-            'search_default_customer': 1,
+
+        <!-- 🔑 CLAVE: Contexto con move_type para que la form sepa que es factura -->
+        <field name="context">{
+            'default_move_type': 'out_invoice',
             'search_default_posted': 1
-        }
-        </field>
+        }</field>
+
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                No hay facturas de cliente con estado de SII "Reparo".
+                No hay facturas de cliente con estado SII "Reparo".
             </p>
         </field>
     </record>
 
-       <menuitem
+    <menuitem
         id="menu_customer_invoices_reparo"
         name="Facturas con Reparo (Clientes)"
         parent="account.menu_finance"
