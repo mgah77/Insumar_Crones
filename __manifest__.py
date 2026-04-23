@@ -1,8 +1,8 @@
 {
-    'name': 'Ajuste Automático de Stock',
+    'name': 'Insumar Crones',
     'version': '1.0',
-    'category': 'Inventory',
-    'summary': 'Ajusta stock a una cifra fija semanalmente en bodegas seleccionadas',
+    'category': 'Base',
+    'summary': 'Crones varios',
     'author': 'M.Gah',
     'depends': ['account', 'parches_insumar'],
     'data': [
