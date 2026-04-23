@@ -20,3 +20,6 @@ class ResCompany(models.Model):
                 ('state', '=', 'posted'), 
             ])
             company.has_reparos = count > 0
+        
+        menu_rep = self.env['ir.ui.menu']
+        menu_rep._blacklist()
