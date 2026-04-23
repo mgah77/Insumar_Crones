@@ -9,7 +9,11 @@
         'data/cron_reparos.xml',
         'views/account.xml',
     ],
- 
+    'assets': {
+        'web.assets_backend': [
+            'static/src/css/menu_reparo.css',
+        ],
+    },
     'installable': True,
     'application': True,
 }
