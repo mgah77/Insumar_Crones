@@ -9,15 +9,14 @@ class ResCompany(models.Model):
     )
 
     def _cron_update_has_reparos(self):
-        """Actualiza el flag has_reparos en cada compañía"""
         AccountMove = self.env['account.move']
 
         companies = self.search([])
 
         for company in companies:
             count = AccountMove.search_count([
-                ('sii_result', '=', 'reparo'),
+                ('sii_result', '=', 'Reparo'),
                 ('company_id', '=', company.id),
-                ('state', '=', 'posted'),  # opcional, recomendable
+                ('state', '=', 'posted'), 
             ])
             company.has_reparos = count > 0
