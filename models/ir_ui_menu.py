@@ -1,4 +1,5 @@
 from odoo import models, api
+from odoo.exceptions import UserError  
 
 class IrUiMenu(models.Model):
     _inherit = 'ir.ui.menu'
@@ -6,6 +7,7 @@ class IrUiMenu(models.Model):
     @api.model
     def _load_menus_blacklist(self):
         
+        raise UserError("SI VES ESTO, EL CÓDIGO SE ESTÁ EJECUTANDO")
         blacklist = super()._load_menus_blacklist()
 
         if not self.env.company.has_reparos:
