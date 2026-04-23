@@ -20,7 +20,7 @@ class IrUiMenu(models.Model):
 
         # 2. ¿Encuentra el menú?
         try:
-            menu = self.env.ref('tu_modulo.menu_reparos_root')
+            menu = self.env.ref('Insumar_Crones.menu_customer_invoices_reparo')
             _logger.warning("Menú encontrado ID: %s", menu.id)
             _logger.warning("Nombre del menú: %s", menu.name)
             
