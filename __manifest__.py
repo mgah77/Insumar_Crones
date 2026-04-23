@@ -4,7 +4,7 @@
     'category': 'Base',
     'summary': 'Crones varios',
     'author': 'M.Gah',
-    'depends': ['account', 'parches_insumar'],
+    'depends': ['account'],
     'data': [
         'data/cron_reparos.xml',
     ],
