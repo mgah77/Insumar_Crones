@@ -4,11 +4,9 @@
     'category': 'Inventory',
     'summary': 'Ajusta stock a una cifra fija semanalmente en bodegas seleccionadas',
     'author': 'M.Gah',
-    'depends': ['stock', 'product'],
+    'depends': ['account', 'parches_insumar'],
     'data': [
-        'views/warehouse_views.xml',
-        'views/product_views.xml',
-        'security/cron_data.xml',
+        'data/cron_reparos.xml',
     ],
     'installable': True,
     'application': True,
