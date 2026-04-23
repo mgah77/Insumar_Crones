@@ -1,4 +1,4 @@
-/* 🔴 Menú "Facturas con Reparo (Clientes)" - Color rojo llamativo */
+/* 🔴 Menú "Facturas con Reparo (Clientes)" - Color rojo llamativo 
 a[data-menu-xmlid="Insumar_Crones.menu_customer_invoices_reparo"] {
     color: #000 !important;
     background-color: #e67e22 !important;    
@@ -10,4 +10,4 @@ a[data-menu-xmlid="Insumar_Crones.menu_customer_invoices_reparo"]:hover {
     background-color: #c0392b !important;
     font-weight: bold !important;
 }
-
+*/
