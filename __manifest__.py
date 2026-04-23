@@ -4,7 +4,7 @@
     'category': 'Base',
     'summary': 'Crones varios',
     'author': 'M.Gah',
-    'depends': ['account'],
+    'depends': ['account','l10n_cl_fe'],
     'data': [
         'data/cron_reparos.xml',
         'views/account.xml',
