@@ -11,7 +11,7 @@
     ],
     'assets': {
         'web.assets_backend': [
-            'static/src/css/menu_reparo.css',
+            'Insumar_Crones/static/src/css/menu_reparo.css',
         ],
     },
     'installable': True,
