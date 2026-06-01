@@ -15,7 +15,7 @@
         <field name="domain">
             [
                 ('move_type', '=', 'out_invoice'),
-                ('sii_result', '=', 'Reparo'),
+                ('sii_result', 'in', ['Reparo', 'Rechazado']),
                 ('state', '=', 'posted')
             ]
         </field>
