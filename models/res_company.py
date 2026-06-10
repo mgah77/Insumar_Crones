@@ -15,9 +15,9 @@ class ResCompany(models.Model):
 
         for company in companies:
             count = AccountMove.search_count([
-                ('sii_result', '=', 'Reparo'),
+                ('sii_result', 'in', ['Reparo', 'Rechazado']),
                 ('company_id', '=', company.id),
-                ('state', '=', 'posted'), 
+                ('state', '=', 'posted'),
             ])
             company.has_reparos = count > 0
         
