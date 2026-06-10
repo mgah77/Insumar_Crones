@@ -38,7 +38,7 @@
         name="Facturas con Reparo (Clientes)"
         parent="account.menu_finance"
         action="action_customer_invoices_reparo"
-        sequence="15"
+        sequence="16"
         groups="account.group_account_manager"/>
 
 </odoo>
